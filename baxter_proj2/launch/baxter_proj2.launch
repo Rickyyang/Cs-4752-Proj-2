@@ -1,4 +1,7 @@
 <launch>
         <node name="robot_interface" pkg="baxter_proj2" type="robot_interface.py">
         </node>
+		<include file="$(find collision_checker)/launch/collision_server.launch">
+			<arg name="visualize" value="false"/>
+		</include>
 </launch>
